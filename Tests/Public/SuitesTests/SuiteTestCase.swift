@@ -36,15 +36,15 @@ class SuiteTestCase: XCTestCase {
         
         let data: Data! = try? Data(contentsOf: URL(fileURLWithPath: path))
         if data == nil {
-            XCTFail("No test suite in \(path)")
+            XCTFail("No test suite in \(String(describing: path))")
             return
         }
         
         let testSuite = try! JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions(rawValue: 0)) as! NSDictionary
         
-        let tests = testSuite["tests"] as! NSArray!
+        let tests = testSuite["tests"] as! NSArray?
         if tests == nil {
-            XCTFail("Missing tests in \(path)")
+            XCTFail("Missing tests in \(String(describing: path))")
             return
         }
         

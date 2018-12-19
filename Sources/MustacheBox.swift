@@ -450,14 +450,17 @@ final public class MustacheBox : NSObject {
             self.render = { (_) in return Rendering("") }
             self.hasCustomRenderFunction = false
             super.init()
-            self.render = { [unowned self] (info: RenderingInfo) in
+            self.render = { [weak self] (info: RenderingInfo) in
+                guard let strongSelf = self else {
+                    return Rendering("oops")
+                }
                 
                 // Default rendering depends on the tag type:
                 switch info.tag.type {
                 case .variable:
                     // {{ box }} and {{{ box }}}
                     
-                    if let value = self.value {
+                    if let value = strongSelf.value {
                         // Use the built-in Swift String Interpolation:
                         return Rendering("\(value)", .text)
                     } else {
@@ -467,7 +470,7 @@ final public class MustacheBox : NSObject {
                     // {{# box }}...{{/ box }}
                     
                     // Push the value on the top of the context stack:
-                    let context = info.context.extendedContext(self)
+                    let context = info.context.extendedContext(strongSelf)
                     
                     // Renders the inner content of the section tag:
                     return try info.tag.render(context)
