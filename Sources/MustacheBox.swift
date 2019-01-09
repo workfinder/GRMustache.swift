@@ -407,7 +407,6 @@ final public class MustacheBox : NSObject {
             didRender: didRender)
     }
 
-    
     // -------------------------------------------------------------------------
     // MARK: - Internal
     

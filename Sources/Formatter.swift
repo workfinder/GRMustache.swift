@@ -75,7 +75,7 @@ extension Formatter {
     /// Typically, `NumberFormatter` only formats numbers, and `DateFormatter`,
     /// dates: you can safely mix various data types in a section controlled by
     /// those well-behaved formatters.
-    open override var mustacheBox: MustacheBox {
+    @objc open override var mustacheBox: MustacheBox {
         // Return a multi-facetted box, because NSFormatter interacts in
         // various ways with Mustache rendering.
         
