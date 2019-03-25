@@ -109,6 +109,7 @@
 		56FC9C8D1A17CD0C0020AAF8 /* ConfigurationTagDelimitersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC9C871A17CD0C0020AAF8 /* ConfigurationTagDelimitersTests.swift */; };
 		56FC9C8E1A17CD0C0020AAF8 /* ContextValueForMustacheExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC9C891A17CD0C0020AAF8 /* ContextValueForMustacheExpressionTests.swift */; };
 		56FC9C911A189FA70020AAF8 /* VariadicFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC9C901A189FA70020AAF8 /* VariadicFilterTests.swift */; };
+		FC94788E22492BC0002F642E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FC94788D22492BC0002F642E /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,7 @@
 		56FC9C871A17CD0C0020AAF8 /* ConfigurationTagDelimitersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTagDelimitersTests.swift; sourceTree = "<group>"; };
 		56FC9C891A17CD0C0020AAF8 /* ContextValueForMustacheExpressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextValueForMustacheExpressionTests.swift; sourceTree = "<group>"; };
 		56FC9C901A189FA70020AAF8 /* VariadicFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariadicFilterTests.swift; sourceTree = "<group>"; };
+		FC94788D22492BC0002F642E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 		563AE18D19FBE4790028C6C1 = {
 			isa = PBXGroup;
 			children = (
+				FC94788D22492BC0002F642E /* LICENSE */,
 				56056AA51A84CDBD0076BBAA /* TODO.md */,
 				56B45F5D1C15B9FB00A18DAD /* Mustache */,
 				563AE1A619FBE47A0028C6C1 /* Tests */,
@@ -728,6 +731,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC94788E22492BC0002F642E /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
